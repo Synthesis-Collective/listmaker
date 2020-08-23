@@ -30,6 +30,7 @@ namespace ListMaker
                 patcher: RunPatch,
                 new UserPreferences()
                 {
+                    IncludeDisabledMods = true,
                     ActionsForEmptyArgs = new RunDefaultPatcher()
                     {
                         IdentifyingModKey = "ListMaker.esp",
@@ -43,7 +44,7 @@ namespace ListMaker
         {
             var lvliMap = LVLIMap.CreateMap();
 
-            foreach (var leveledList in state.LoadOrder.PriorityOrder.WinningOverrides<ILeveledItemGetter>())
+            foreach (var leveledList in state.LoadOrder.PriorityOrder.OnlyEnabled().WinningOverrides<ILeveledItemGetter>())
             {
                 if (lvliMap.ContainsValue(leveledList.FormKey)) continue;
 
