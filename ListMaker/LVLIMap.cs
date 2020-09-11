@@ -187,7 +187,7 @@ namespace ListMaker
                     { "Bow",        new FormKey("Skyrim.esm", 0x01399d) },
                     { "Dagger",     new FormKey("Skyrim.esm", 0x01399e) },
                     { "Greatsword", new FormKey("Skyrim.esm", 0x01399f) },
-                    { "Mace",       new FormKey("Skyrim.esm", 0x013990) },
+                    { "Mace",       new FormKey("Skyrim.esm", 0x0139a0) },
                     { "Scimitar",   FormKey.Null                        },
                     { "Sword",      new FormKey("Skyrim.esm", 0x0139a1) },
                     { "WarAxe",     new FormKey("Skyrim.esm", 0x01399b) },
@@ -275,10 +275,10 @@ namespace ListMaker
                 ["Steel"] = new Dictionary<string, FormKey>()
                 {
                     { "Battleaxe",  new FormKey("Skyrim.esm", 0x013984) },
-                    { "Bow",        new FormKey("Skyrim.esm", 0x013986) },
-                    { "Dagger",     new FormKey("Skyrim.esm", 0x013987) },
-                    { "Greatsword", new FormKey("Skyrim.esm", 0x013988) },
-                    { "Mace",       new FormKey("Skyrim.esm", 0x07a91a) },
+                    { "Bow",        new FormKey("Skyrim.esm", 0x013985) },
+                    { "Dagger",     new FormKey("Skyrim.esm", 0x013986) },
+                    { "Greatsword", new FormKey("Skyrim.esm", 0x013987) },
+                    { "Mace",       new FormKey("Skyrim.esm", 0x013988) },
                     { "Scimitar",   FormKey.Null                        },
                     { "Sword",      new FormKey("Skyrim.esm", 0x013989) },
                     { "WarAxe",     new FormKey("Skyrim.esm", 0x013983) },
