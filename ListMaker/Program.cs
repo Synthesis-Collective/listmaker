@@ -50,13 +50,14 @@ namespace ListMaker
 
                 if (leveledList.Entries == null) continue;
 
-                var modifiedList = state.PatchMod.LeveledItems.GetOrAddAsOverride(leveledList);
-
-                foreach (var entry in modifiedList.Entries.EmptyIfNull())
+                for (var i = 0; i <leveledList.Entries.Count; i++)
                 {
+                    var entry = leveledList.Entries[i];
                     if (entry.Data == null) continue;
                     if (!lvliMap.ContainsKey(entry.Data.Reference.FormKey)) continue;
-                    entry.Data.Reference = lvliMap[entry.Data.Reference.FormKey];
+
+                    var modifiedList = state.PatchMod.LeveledItems.GetOrAddAsOverride(leveledList);
+                    modifiedList.Entries![i].Data!.Reference = lvliMap[entry.Data.Reference.FormKey];
                 }
             }
 
@@ -64,12 +65,12 @@ namespace ListMaker
             {
                 if (npc.Items == null) continue;
 
-                var modifiedNpc = state.PatchMod.Npcs.GetOrAddAsOverride(npc);
-
-                foreach (var entry in modifiedNpc.Items.EmptyIfNull())
+                for (var i = 0; i < npc.Items.Count; i++)
                 {
+                    var entry = npc.Items[i];
                     if (!lvliMap.ContainsKey(entry.Item.Item.FormKey)) continue;
-                    entry.Item.Item = lvliMap[entry.Item.Item.FormKey];
+                    var modifiedNpc = state.PatchMod.Npcs.GetOrAddAsOverride(npc);
+                    modifiedNpc.Items![i].Item.Item = lvliMap[entry.Item.Item.FormKey];
                 }
             }
         }
